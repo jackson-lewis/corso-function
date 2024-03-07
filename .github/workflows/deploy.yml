@@ -26,4 +26,8 @@ jobs:
       with:
         name: 'corso-function'
         runtime: 'nodejs20'
+        entry_point: 'helloWorld'
+        memory_mb: 128
+        region: 'us-central1'
+        timeout: 10
   
