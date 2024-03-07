@@ -24,7 +24,7 @@ jobs:
     - id: 'deploy'
       uses: 'google-github-actions/deploy-cloud-functions@v2'
       with:
-        name: 'corso-function'
+        name: 'corso-function2'
         runtime: 'nodejs20'
         entry_point: 'helloWorld'
         memory_mb: 128
