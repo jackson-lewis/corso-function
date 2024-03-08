@@ -16,6 +16,22 @@ jobs:
     steps:
     - uses: 'actions/checkout@v4'
 
+    - name: Set-up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20
+
+    - name: Cache node_modules
+      uses: actions/cache@v3
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    - name: npm install
+      run: npm install
+
     - id: 'auth'
       uses: 'google-github-actions/auth@v2'
       with:

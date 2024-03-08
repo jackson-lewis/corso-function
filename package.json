@@ -1,8 +1,17 @@
 {
   "name": "corso-function",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "postinstall": "npm run build",
+    "start": "functions-framework --target=helloWorld",
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
   "dependencies": {
     "@google-cloud/functions-framework": "^3.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.2"
   }
 }
