@@ -39,15 +39,15 @@ jobs:
       with:
         version: '>= 363.0.0'
   
-    - name: 'Deploy Cloud Function'
+    - name: 'Deploy Optimize Function'
       run: |
-        gcloud functions deploy corso-function3 \
+        gcloud functions deploy optimize \
           --region us-central1 \
           --gen2 \
           --allow-unauthenticated \
           --memory 128Mi \
           --runtime nodejs20 \
-          --entry-point helloWorld \
+          --entry-point optimize \
           --trigger-http \
           --timeout 10 \
           --source .

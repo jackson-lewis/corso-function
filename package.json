@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
-    "start": "functions-framework --source=. --target=helloWorld",
+    "start": "functions-framework --source=. --target=optimize",
     "build": "tsc",
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "@google-cloud/functions-framework": "^3.3.0"
+    "@google-cloud/functions-framework": "^3.3.0",
+    "sharp": "^0.33.2"
   },
   "devDependencies": {
     "typescript": "^5.4.2"
