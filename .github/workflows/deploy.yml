@@ -51,5 +51,16 @@ jobs:
           --trigger-http \
           --timeout 10 \
           --source .
-    - name: Check
-      run: ls
+    
+    - name: 'Deploy Serve Function'
+      run: |
+        gcloud functions deploy serve \
+          --region us-central1 \
+          --gen2 \
+          --allow-unauthenticated \
+          --memory 128Mi \
+          --runtime nodejs20 \
+          --entry-point serve \
+          --trigger-http \
+          --timeout 10 \
+          --source .
