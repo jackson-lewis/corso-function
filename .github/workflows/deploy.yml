@@ -21,13 +21,18 @@ jobs:
       with:
         credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
         
-    - id: 'deploy'
-      uses: 'google-github-actions/deploy-cloud-functions@v2'
+    - name: 'Set up Cloud SDK'
+      uses: 'google-github-actions/setup-gcloud@v2'
       with:
-        name: 'corso-function2'
-        runtime: 'nodejs20'
-        entry_point: 'helloWorld'
-        memory_mb: 128
-        region: 'us-central1'
-        timeout: 10
+        version: '>= 363.0.0'
   
+    - name: 'Deploy Cloud Function'
+      run: |
+        gcloud functions deploy corso-function3 \
+          --region us-central1 \
+          --gen2 \
+          --memory 128 \
+          --runtime nodejs20 \
+          --trigger-http \
+          --timeout 10 \
+          --source .
