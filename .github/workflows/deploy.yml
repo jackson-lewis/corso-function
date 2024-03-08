@@ -30,7 +30,10 @@ jobs:
           ${{ runner.os }}-node-
 
     - name: npm install
-      run: npm install
+      run: |
+        npm install
+        npm run build
+        ls
 
     - id: 'auth'
       uses: 'google-github-actions/auth@v2'
