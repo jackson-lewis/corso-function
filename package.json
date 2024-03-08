@@ -2,6 +2,7 @@
   "name": "corso-function",
   "version": "1.0.0",
   "main": "lib/optimize.js",
+  "type": "module",
   "scripts": {
     "start": "functions-framework --source=. --target=optimize"
   },
