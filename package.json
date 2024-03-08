@@ -1,14 +1,13 @@
 {
   "name": "corso-function",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "lib/optimize.js",
   "scripts": {
-    "start": "functions-framework --source=. --target=optimize",
-    "build": "tsc",
-    "watch": "tsc --watch"
+    "start": "functions-framework --source=. --target=optimize"
   },
   "dependencies": {
     "@google-cloud/functions-framework": "^3.3.0",
+    "@google-cloud/storage": "^7.8.0",
     "sharp": "^0.33.2"
   },
   "devDependencies": {
