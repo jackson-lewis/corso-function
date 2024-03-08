@@ -34,6 +34,7 @@ jobs:
           --allow-unauthenticated \
           --memory 128Mi \
           --runtime nodejs20 \
+          --entry-point helloWorld \
           --trigger-http \
           --timeout 10 \
           --source .
