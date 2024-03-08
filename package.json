@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
-    "postinstall": "npm run build",
-    "start": "functions-framework --target=helloWorld",
+    "start": "functions-framework --source=. --target=helloWorld",
     "build": "tsc",
     "watch": "tsc --watch"
   },
