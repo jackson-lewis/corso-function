@@ -31,7 +31,8 @@ jobs:
         gcloud functions deploy corso-function3 \
           --region us-central1 \
           --gen2 \
-          --memory 128 \
+          --allow-unauthenticated \
+          --memory 128Mi \
           --runtime nodejs20 \
           --trigger-http \
           --timeout 10 \
