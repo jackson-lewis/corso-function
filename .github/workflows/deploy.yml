@@ -51,3 +51,5 @@ jobs:
           --trigger-http \
           --timeout 10 \
           --source .
+    - name: Check
+      run: ls
